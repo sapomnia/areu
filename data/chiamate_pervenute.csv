@@ -1,0 +1,5 @@
+data,soreu,totale,soccorso_primario,soccorso_secondario,informazione,consulenza,trasporto_organi,altro
+2026-07-14,ALPI,755,682,6,26,25,,16
+2026-07-14,LAGHI,820,776,2,23,6,,13
+2026-07-14,METROPOLITANA,1058,928,10,50,23,12,33
+2026-07-14,PIANURA,858,807,2,30,7,,12

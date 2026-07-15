@@ -1,0 +1,13 @@
+data,aat,soreu,totale,medico_acuto,caduta,incidente_stradale,infortunio,evento_violento,intossicazione,animali,calamita_naturale,evento_massa,incidente_acqua,incidente_montano,incidente_speleo,soccorso_persona,altro_non_noto,altri_motivi
+2026-07-14,BERGAMO,ALPI,266,179,40,16,5,6,6,2,0,0,0,0,0,5,7,0
+2026-07-14,BRESCIA,ALPI,336,196,55,31,7,16,4,7,0,0,1,0,0,6,13,0
+2026-07-14,COMO,LAGHI,153,107,18,8,6,1,6,0,0,0,1,0,0,2,4,0
+2026-07-14,CREMONA,PIANURA,122,80,11,10,3,11,4,1,0,0,0,0,0,1,1,0
+2026-07-14,LECCO,LAGHI,98,75,12,2,1,2,1,1,0,0,0,0,0,2,2,0
+2026-07-14,LODI,PIANURA,67,45,9,3,2,3,0,1,0,0,0,0,0,2,2,0
+2026-07-14,MANTOVA,PIANURA,111,82,14,5,2,2,2,2,0,0,0,0,0,1,1,0
+2026-07-14,MILANO,METROPOLITANA,1156,748,150,70,28,42,45,5,0,0,0,0,0,21,47,0
+2026-07-14,MONZA,METROPOLITANA,198,126,32,8,9,4,6,1,0,0,0,0,0,4,8,0
+2026-07-14,PAVIA,PIANURA,196,157,17,10,2,3,3,2,0,0,0,0,0,0,2,0
+2026-07-14,SONDRIO,ALPI,59,36,9,5,3,1,0,0,0,0,0,0,0,0,5,0
+2026-07-14,VARESE,LAGHI,223,150,32,10,4,9,3,3,0,0,0,0,0,2,10,0
