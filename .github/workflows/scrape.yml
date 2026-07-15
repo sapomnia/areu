@@ -1,0 +1,46 @@
+name: Scraper AREU agosto 2026
+
+on:
+  schedule:
+    # I cron di GitHub Actions sono in UTC (in agosto l'Italia è UTC+2).
+    # Ogni esecuzione salva i dati di "ieri": per coprire l'1-31 agosto
+    # il workflow gira dal 2 agosto al 1° settembre 2026.
+    # Due passaggi al giorno (07:10 e 19:10 italiane): il secondo fa da
+    # rete di sicurezza se il primo fallisce; lo script è idempotente.
+    - cron: "10 5 2-31 8 *"
+    - cron: "10 17 2-31 8 *"
+    - cron: "10 5 1 9 *"
+    - cron: "10 17 1 9 *"
+  workflow_dispatch:
+
+concurrency:
+  group: scraper-areu
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Esegui lo scraper
+        run: python scraper.py
+
+      - name: Commit dei CSV aggiornati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/*.csv
+          if git diff --cached --quiet; then
+            echo "Nessun dato nuovo, niente commit."
+          else
+            git commit -m "Dati AREU del $(date -u +%F)"
+            git push
+          fi
